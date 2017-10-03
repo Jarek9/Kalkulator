@@ -56,6 +56,7 @@ public class Calculator {
         frame.setBounds(100, 100, 376, 583);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().setLayout(null);
+        frame.setLocationRelativeTo(null);
 
         try {
             UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
@@ -305,27 +306,27 @@ public class Calculator {
                 if (operations == "+") {
 
                     result = firstnum + secondnum;
-                    answer = String.format("%1f", result);
+                    answer = String.format("%.2f", result);
                     TextField.setText(answer);
                 } else if (operations == "-") {
 
                     result = firstnum - secondnum;
-                    answer = String.format("%1f", result);
+                    answer = String.format("%.2f", result);
                     TextField.setText(answer);
                 } else if (operations == "*") {
 
                     result = firstnum * secondnum;
-                    answer = String.format("%1f", result);
+                    answer = String.format("%.2f", result);
                     TextField.setText(answer);
                 } else if (operations == "/") {
 
                     result = firstnum / secondnum;
-                    answer = String.format("%1f", result);
+                    answer = String.format("%.2f", result);
                     TextField.setText(answer);
                 } else if (operations == "%") {
 
                     result = firstnum % secondnum;
-                    answer = String.format("%1f", result);
+                    answer = String.format("%.2f", result);
                     TextField.setText(answer);
                 }
             }
