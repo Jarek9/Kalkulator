@@ -1,17 +1,9 @@
 package com.kodilla.kodillacourse;
 
-import java.awt.EventQueue;
-import java.awt.Font;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
-import javax.swing.SwingConstants;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
 
 public class Calculator {
 
@@ -22,7 +14,6 @@ public class Calculator {
     double secondnum;
     double result;
     String operations;
-
 
 
 //	 Launch the application.
@@ -101,22 +92,18 @@ public class Calculator {
         frame.getContentPane().add(btn7);
 
         JButton btn4 = new JButton("4");
-        btn4.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                String EnterNumber = TextField.getText() + btn4.getText();
-                TextField.setText(EnterNumber);
-            }
+        btn4.addActionListener(e -> {
+            String EnterNumber = TextField.getText() + btn4.getText();
+            TextField.setText(EnterNumber);
         });
         btn4.setFont(new Font("Tahoma", Font.BOLD, 30));
         btn4.setBounds(15, 254, 70, 70);
         frame.getContentPane().add(btn4);
 
         JButton btn1 = new JButton("1");
-        btn1.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                String EnterNumber = TextField.getText() + btn1.getText();
-                TextField.setText(EnterNumber);
-            }
+        btn1.addActionListener(e -> {
+            String EnterNumber = TextField.getText() + btn1.getText();
+            TextField.setText(EnterNumber);
         });
         btn1.setFont(new Font("Tahoma", Font.BOLD, 30));
         btn1.setBounds(15, 340, 70, 70);
