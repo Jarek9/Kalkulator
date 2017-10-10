@@ -23,6 +23,7 @@ public class Calculator {
     double result;
     String operations;
     String answer;
+    String someChanges;
 
 
 
