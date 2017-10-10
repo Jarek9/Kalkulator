@@ -22,6 +22,7 @@ public class Calculator {
     double secondnum;
     double result;
     String operations;
+    String answer;
 
 
 
@@ -62,7 +63,6 @@ public class Calculator {
             UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException
                 | UnsupportedLookAndFeelException e1) {
-            // TODO Auto-generated catch block
             e1.printStackTrace();
         }
         TextField = new JTextField();
@@ -301,7 +301,7 @@ public class Calculator {
         btnEqual.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
-                String answer;
+
                 secondnum = Double.parseDouble(TextField.getText());
                 if (operations == "+") {
 
